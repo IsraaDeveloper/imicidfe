@@ -7,7 +7,7 @@ async function shortenLink() {
         return;
     }
 
-    const response = await fetch("http://localhost:3000/shorten", {
+    const response = await fetch("https://imicidbe.vercel.app/shorten", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ long_url: longUrl, custom_slug: customSlug }),
