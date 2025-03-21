@@ -13,7 +13,7 @@
         <h1>Shortener Link</h1>
         <input type="text" id="longUrl" placeholder="Masukkan URL panjang">
         <input type="text" id="customSlug" placeholder="Custom slug (opsional)">
-        <button onclick="shortenLink()">Shorten</button>
+        <button id="shortenButton" onclick="shortenLink()">Shorten</button>
     </div>
 
     <div id="popup" class="popup" style="display: none;">
@@ -137,6 +137,9 @@
             border-radius: 5px;
             color: white;
             margin: 5px;
+        }
+        #shortenButton {
+            background: #ff9800;
         }
         .whatsapp { background: #25D366; }
         .facebook { background: #3b5998; }
