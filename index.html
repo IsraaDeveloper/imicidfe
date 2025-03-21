@@ -7,12 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background"></div>
     <div class="container">
         <h1>Shortener Link</h1>
         <input type="text" id="longUrl" placeholder="Masukkan URL panjang">
         <input type="text" id="customSlug" placeholder="Custom slug (opsional)">
         <button onclick="shortenLink()">Shorten</button>
-        <div id="result"></div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Short Link: <a id="shortLink" href="#" target="_blank"></a></p>
+            <div id="qrcode"></div>
+            <div class="share-buttons">
+                <button onclick="shareToWhatsApp()">Share WhatsApp</button>
+                <button onclick="copyToClipboard()">Copy</button>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
